@@ -1,65 +1,136 @@
-date
-cal
-df
-free
-exit
+# Linux Shell commands cheat sheet #
 
-pwd
-cd
-ls
+<br />
+<br />
 
-file
-less
+<div itemscope>
+<h2 align=center
+    tabindex=1
+    itemprop="heading"
+> 
+Example commands 
+</h2>
+</div>
 
-ls options:
--a -d -h -r -S -t
+Command | Description
+---|---|
+date | print or set the system date and time
+cal | display a caldendar
+df | report file system space usage
+free | display amount of free used memory in system
+exit | ends terminal session
 
-/ root directory
+<br />
+<br />
 
-/bin contains binaries that must be present for the system to boot and run
+<div itemscope>
+<h2 align=center
+    tabindex=1
+    itemprop="heading"
+> 
+Navigation 
+</h2>
+</div>
 
-/boot contains the linux kernel, initial RAM disk image
-/boot/grub/grub.conf - menu.lst (boot loader)
-/boot/vmlinuz the kernel
+Command | Description
+---|---|
+pwd | print name of current/working directory
+cd | change the working directory
+ls | list directory contents
 
-/dev device nodes - everything is a file, kernal maintains a list of all devices it understands
+<br />
+E,g. commands with options and arguments
 
-/etc - system-wide configuration files, shell scripts starting system services at boot time
-/etc/crontab file defining when automated jobs will run
-/etc/fstab a table of storage devices and their associated mount points
-/etc/passwd list of user accounts
+```
+ls -lth --reverse -S
+```
+* **-l** -display results in long format
+* **-t** -sort by modification time
+* **-h** -display file sizes in human-readble format rather then in bytes
+* **-S** -sort results by file size
+* **--reverse** -displays the result in reverse order
 
-/home - user home directory
 
-/lib - shared library files used by core system programs. Similar to DLLs in Windows
+<br />
+<br />
 
-/lost+found used for partial recovery from corruption event.
 
-/media - mount points for removable media
+<div itemscope>
+<h2 align=center
+    tabindex=1
+    itemprop="heading"
+> 
+Exploring the file system 
+</h2>
+</div>
 
-/mnt - contains mount points for removable devices mounted manually
 
-/opt - used to install optional software, commercial products 
+Command | Description
+---|---|
+file | determine file type
+less | opposite of more
 
-/proc - virtual filesystem maintained by linux kernel, looking glass to kernal itself
+E,g. commands with options and arguments
 
-/root - home dir for root
+```
+[me@linuxbox ˜]$ file picture.jpg
+picture.jpg: JPEG image data, JFIF standard 1.01
+```
 
-/sbin - system binaries, programs performing vital tasks reserved to superuser
+Using **less** :
 
-/tmp - intended for temporary files storage
+Command | Description
+---|---|
+page up or b | scroll back one page
+page down or spacebar | scroll forware one page
+Up Arrow | Scroll up one line
+Down Arrow | Scroll down one line
+G | Move to the end of the text line
+1G or g | Move to the beginning of the text file
+n | search for the next occurrence of the previous search
+q | Quit **less**
 
-/usr - likely largest dir, contains programs and support files used by regular users
-/usr/bin - exec programs installed by linux distribution
-/usr/lib - shared libraries for /usr/bin programs
-/usr/local - system wide usable programs, install by system administrators
-/usr/sbin - more system administration programs
-/usr/share - contains all the shared data used by programs in /usr/bin. Config files,icons,screen backgrounds
-/usr/share/doc - documentation folder
+***less is more!!*** - from a class of programs called *pagers* allowing easy viewing of long text documents in a page-by-page manner.
 
-/var - dynamic directory(content). Databases, spool files, user mail
-/var/log - contains log files, viewed by superuser
-/var/log/messages
+<br />
+
+## Linux file system structure ##
+
+<br />
+
+Directory/File | Comment
+---|---|
+/ |root directory
+/bin | contains binaries that must be present for the system to boot and run
+/boot | contains the linux kernel, initial RAM disk image
+/boot/grub/grub.conf | - menu.lst (boot loader)
+/boot/vmlinuz | the kernel
+/dev | device nodes - everything is a file, kernal maintains a list of all devices it understands
+/etc | system-wide configuration files, shell scripts starting system services at boot time
+/etc/crontab | file defining when automated jobs will run
+/etc/fstab | a table of storage devices and their associated mount points
+/etc/passwd | list of user accounts
+/home | user home directory
+/lib | shared library files used by core system programs. Similar to DLLs in Windows
+/lost+found | used for partial recovery from corruption event.
+/media | mount points for removable media
+/mnt | contains mount points for removable devices mounted manually
+/opt | used to install optional software, commercial products 
+/proc | virtual filesystem maintained by linux kernel, looking glass to kernal itself
+/root | home dir for root
+/sbin | system binaries, programs performing vital tasks reserved to superuser
+/tmp | intended for temporary files storage
+/usr | likely largest dir, contains programs and support files used by regular users
+/usr/bin | exec programs installed by linux distribution
+/usr/lib | shared libraries for /usr/bin programs
+/usr/local | system wide usable programs, install by system administrators
+/usr/sbin | more system administration programs
+/usr/share | contains all the shared data used by programs in /usr/bin. Config files,icons,screen backgrounds
+/usr/share/doc | documentation folder
+/var | dynamic directory(content). Databases, spool files, user mail
+/var/log | contains log files, viewed by superuser e.g /var/log/messages
+
+
 
 
 cp
