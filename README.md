@@ -20,8 +20,6 @@ df | report file system space usage
 free | display amount of free used memory in system
 exit | ends terminal session
 
-<br />
-<br />
 
 <div itemscope>
 <h2 align=center
@@ -32,6 +30,8 @@ Navigation
 </h2>
 </div>
 
+<br />
+
 Command | Description
 ---|---|
 pwd | print name of current/working directory
@@ -39,21 +39,20 @@ cd | change the working directory
 ls | list directory contents
 
 <br />
-E,g. commands with options and arguments
+
+E.g. commands with options and arguments
 
 ```
 ls -lth --reverse -S
 ```
-* **-l** -display results in long format
-* **-t** -sort by modification time
-* **-h** -display file sizes in human-readble format rather then in bytes
-* **-S** -sort results by file size
-* **--reverse** -displays the result in reverse order
+* **-l**  :display results in long format
+* **-t**  :sort by modification time
+* **-h**  :display file sizes in human-readble format rather then in bytes
+* **-S**  :sort results by file size
+* **--reverse**  :displays the result in reverse order
 
 
 <br />
-<br />
-
 
 <div itemscope>
 <h2 align=center
@@ -64,6 +63,7 @@ Exploring the file system
 </h2>
 </div>
 
+<br />
 
 Command | Description
 ---|---|
@@ -94,7 +94,14 @@ q | Quit **less**
 
 <br />
 
-## Linux file system structure ##
+<div itemscope>
+<h2 align=center
+    tabindex=1
+    itemprop="heading"
+> 
+Linux file system structure
+</h2>
+</div>
 
 <br />
 
@@ -130,30 +137,72 @@ Directory/File | Comment
 /var | dynamic directory(content). Databases, spool files, user mail
 /var/log | contains log files, viewed by superuser e.g /var/log/messages
 
+<br />
+
+<div itemscope>
+<h2 align=center
+    tabindex=1
+    itemprop="heading"
+> 
+Manipulating files and directories
+</h2>
+</div>
+
+<br />
 
 
+Command | Description
+---|---|
+cp | copy files and directories
+mv | move (rename) files
+mkdir | make directories
+rm | remove files or directories
+ln | make links between files
 
-cp
-cp options:
--a copy files and attributes
--i interactive useful for overwrites
--r recursively copy directories and their contents 
--u copy only files that don't exist or are newer than the existing corresponding files
--v
+<br />
 
-mv
-mv options:
--i prompt the user for confirmation
--u move only files than either don't exist or are newer
-mkdir
-rm
-rm options:
--i interactive 
--r recursively delete directories
--f force ignore and do not prompt
-ln
-ln options:
--s create symlink (soft)
+E.g. command description
+
+<br />
+
+```
+mkdir directory...
+mkdir dir1
+mkdir dir1 dir2 dir3
+```
+```
+cp item1 item2
+cp item.. directory
+```
+```
+mv item1 item2
+mv item... directory
+```
+
+```
+ln file link
+ln -s item link
+```
+
+* **-i**  :propmts the user for confirmation, interactive
+* **-u**  :performs operation only if either file/directory doesn't exist, or is newer
+* **-v**  :displays informative messages as the move is performed
+* **-r**  :with copy recursively copies directories and their contents
+
+
+<br />
+
+<div itemscope>
+<h2 align=center
+    tabindex=1
+    itemprop="heading"
+> 
+Working with Commands
+</h2>
+</div>
+
+<br />
+
 
 type -- indicate how a command name is interpreted
 which -- display which executable program will be executed
@@ -191,7 +240,19 @@ composing commands with semi colons
 
 e.g. cd /usr; ls; cd -;
 
-### chapter 6 - redirection ###
+<br />
+
+<div itemscope>
+<h2 align=center
+    tabindex=1
+    itemprop="heading"
+> 
+Redirection
+</h2>
+</div>
+
+<br />
+
 
 cat -- Concatenation files
 sort -- Sort lines of text
